@@ -75,6 +75,9 @@ export class ResourceItem {
     this.active = false;
     this.scene.remove(this.mesh);
     this.mesh.geometry.dispose();
-    if (this._light) this.scene.remove(this._light);
+    if (this._light) {
+      this.scene.remove(this._light);
+      this._light = null;
+    }
   }
 }

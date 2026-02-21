@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { ResourceItem, RESOURCE_TYPES } from './ResourceItem.js';
 
 const WORLD_SIZE  = 200;
-const RESPAWN_MIN = 6000;   // ms
-const RESPAWN_MAX = 14000;  // ms
+const RESPAWN_MIN = 6000;   // minimum respawn delay in ms
+const RESPAWN_MAX = 14000;  // maximum respawn delay in ms
 const RESOURCE_COUNT = 110;
 const TREE_COUNT     = 160;
 

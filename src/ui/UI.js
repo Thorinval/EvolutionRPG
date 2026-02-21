@@ -177,8 +177,10 @@ export class UI {
         <h2>Vous êtes Homo Sapiens!</h2>
         <p>Vous avez accompli le voyage de l'évolution, du primate au premier Homme moderne.</p>
         <p>Total de ressources collectées: <strong>${this.evo.totalCollected}</strong></p>
-        <button onclick="location.reload()">🔄 Recommencer</button>
+        <button id="restart-btn">🔄 Recommencer</button>
       </div>`;
+    const btn = this._winEl.querySelector('#restart-btn');
+    if (btn) btn.addEventListener('click', () => location.reload());
   }
 
   // ── Utility ─────────────────────────────────────────────────────

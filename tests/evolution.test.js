@@ -25,6 +25,8 @@ function assert(condition, label) {
 // ── Helpers ───────────────────────────────────────────────────────
 function makeEvo() { return new EvolutionSystem(); }
 
+const EMBER_TYPE = { id: 'ember', name: 'Braise', value: 3, weight: 2 };
+
 function addRes(evo, id, count = 1) {
   const type = { id, name: id, value: 1, weight: 1 };
   for (let i = 0; i < count; i++) evo.addResource(type);
@@ -57,7 +59,7 @@ console.log('\n📋  Resource accumulation');
   assert(evo.resources.fruit === 3, 'Fruit count is correct after adding 3');
   assert(evo.totalCollected === 3,  'Total collected is 3');
 
-  const emberType = { id: 'ember', name: 'Braise', value: 3, weight: 2 };
+  const emberType = EMBER_TYPE;
   evo.addResource(emberType);
   assert(evo.resources.ember === 3,  'Ember value 3 stored correctly');
   assert(evo.totalCollected === 6,   'Total includes ember value');
@@ -120,8 +122,7 @@ console.log('\n📋  Final stage');
   // Stage 4: 30 stone + 20 bone + 10 ember + 180 total
   // After stage 3 we have ~100 total; need 80 more to reach 180.
   fill('stone', 15); fill('bone', 10); fill('fruit', 25); // +50 → ~150 total
-  const emberType = { id: 'ember', name: 'Braise', value: 3, weight: 2 };
-  for (let i = 0; i < 10; i++) evo.addResource(emberType); // +30 → ~180 total
+  for (let i = 0; i < 10; i++) evo.addResource(EMBER_TYPE); // +30 → ~180 total
 
   assert(evo.stageIndex === 4, 'Can reach final stage (Homo Sapiens)');
   assert(evo.getProgressToNext() === 1,  'Progress is 1 at final stage');
