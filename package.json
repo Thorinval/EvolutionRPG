@@ -1,0 +1,27 @@
+{
+  "name": "evolutionrpg",
+  "version": "1.0.0",
+  "description": "Jeu 3D troisième personne RPG Évolution — du primate à Homo Sapiens",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/evolution.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thorinval/EvolutionRPG.git"
+  },
+  "keywords": ["rpg", "3d", "evolution", "primate", "threejs"],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thorinval/EvolutionRPG/issues"
+  },
+  "homepage": "https://github.com/Thorinval/EvolutionRPG#readme",
+  "devDependencies": {
+    "three": "^0.183.1",
+    "vite": "^7.3.1"
+  }
+}
